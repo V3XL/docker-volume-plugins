@@ -19,7 +19,7 @@ FROM base as dev
 RUN curl --silent -L https://dl.google.com/go/go1.12.5.linux-arm64.tar.gz | tar -C /usr/local -zxf - && \
     yum install -y git
 
-COPY glusterfs-volume-plugin/ /root/go/src/github.com/marcelo-ochoa/docker-volume-plugins/glusterfs-volume-plugin
+COPY / /root/go/src/github.com/marcelo-ochoa/docker-volume-plugins/glusterfs-volume-plugin
 COPY mounted-volume/ /root/go/src/github.com/marcelo-ochoa/docker-volume-plugins/mounted-volume
 
 RUN cd /root/go/src/github.com/marcelo-ochoa/docker-volume-plugins/glusterfs-volume-plugin && \
