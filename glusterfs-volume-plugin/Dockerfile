@@ -12,7 +12,7 @@ RUN yum install -y oracle-gluster-release-el7 && \
     mkdir -p /var/lib/glusterd /etc/glusterfs && \
     touch /etc/glusterfs/logger.conf
 
-COPY glusterfs-volume-plugin/rsyslog.conf /etc/rsyslog.conf
+COPY rsyslog.conf /etc/rsyslog.conf
 
 FROM base as dev
 
